@@ -23,3 +23,7 @@ jobs:
       run: wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar && tree
     - name: Build
       run: java -Xms2G -jar BuildTools.jar -rev 1.19.2
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.1
+      with:
+          path: ./
